@@ -1,94 +1,288 @@
-<!-- ======================= -->
-<!-- ARQUIVO 1: index.html -->
-<!-- ======================= -->
-
+<!-- ========================= -->
+<!-- ARQUIVO: index.html -->
+<!-- ========================= -->
 <!DOCTYPE html>
-<!-- Define que o documento está em HTML5 -->
-<html lang="pt-BR">
-<!-- Define o idioma como português do Brasil -->
+<html lang="pt-br">
 <head>
-    <!-- Configurações invisíveis da página -->
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
-    <!-- Permite usar acentos e caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Faz o site se adaptar a celulares (responsividade) -->
+    <title>Agroforte - Futuro Sustentável</title>
 
-
-
-
-    
-    <title>FIEG - Feira Itinerante das Escolas de Guarapuava</title>
-    <!-- Nome que aparece na aba do navegador -->
-
-    <!-- Conecta o HTML com o arquivo CSS externo -->
+    <!-- Link do CSS externo -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Importa fonte do Google Fonts -->
+    <!-- Fonte do Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<!-- Tudo que aparece no site fica dentro do body -->
 
-    <!-- HERO: primeira seção visual (capa do site) -->
-    <div class="hero">
-        <div>
-            <h1>FIEG 2026</h1>
-            <!-- Título principal -->
+<!-- ========================= -->
+<!-- HEADER / MENU -->
+<!-- ========================= -->
+<header>
+    <div class="logo">🌱 Agroforte</div>
 
-            <p>Feira Itinerante das Escolas de Guarapuava</p>
-            <!-- Subtítulo -->
+    <!-- Menu de navegação -->
+    <nav id="nav">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#importancia">Importância</a></li>
+            <li><a href="#praticas">Práticas</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
-            <p>Inovação, criatividade e protagonismo estudantil</p>
-            <!-- Frase de impacto -->
+    <!-- Botão hamburguer (mobile) -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+</header>
 
-            <!-- Botão que leva até a seção de inscrição -->
-            <a href="#inscricao" class="btn">Inscreva-se</a>
-        </div>
+<!-- ========================= -->
+<!-- HERO SECTION -->
+<!-- ========================= -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Futuro sustentável no campo</h1>
+        <p>Equilíbrio entre produção agrícola e preservação ambiental</p>
     </div>
+</section>
 
-    <!-- SEÇÃO SOBRE A FIEG -->
-    <section>
-        <h2>O que é a FIEG?</h2>
-        <!-- Título da seção -->
+<!-- ========================= -->
+<!-- SOBRE -->
+<!-- ========================= -->
+<section id="sobre" class="section">
+    <h2>Sobre o Agro Sustentável</h2>
+    <p>
+        O agro sustentável busca conciliar produtividade com responsabilidade ambiental, garantindo recursos para as futuras gerações.
+    </p>
+</section>
 
-        <p class="texto-central">
-            <!-- Texto centralizado com classe CSS -->
-            A FIEG é um evento educacional que reúne projetos inovadores desenvolvidos por estudantes,
-            promovendo ciência, tecnologia, sustentabilidade e empreendedorismo.
-        </p>
-    </section>
+<!-- ========================= -->
+<!-- IMPORTÂNCIA -->
+<!-- ========================= -->
+<section id="importancia" class="section destaque">
+    <h2>Por que é importante?</h2>
+    <p>
+        A sustentabilidade no campo é essencial para preservar o solo, a água e a biodiversidade, garantindo uma produção contínua e saudável.
+    </p>
+</section>
 
-    <!-- SEÇÃO DE CATEGORIAS -->
-    <section>
-        <h2>Categorias</h2>
+<!-- ========================= -->
+<!-- PRÁTICAS -->
+<!-- ========================= -->
+<section id="praticas" class="section">
+    <h2>Práticas Sustentáveis</h2>
+    <div class="cards">
+        <div class="card">🌾 Rotação de culturas</div>
+        <div class="card">💧 Uso consciente da água</div>
+        <div class="card">🚜 Tecnologia no campo</div>
+    </div>
+</section>
 
-        <!-- Container que agrupa os cards -->
-        <div class="cards">
+<!-- ========================= -->
+<!-- GALERIA -->
+<!-- ========================= -->
+<section id="galeria" class="section">
+    <h2>Galeria</h2>
+    <div class="gallery">
+        <!-- Imagens reais da internet -->
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" alt="Agricultura">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Plantação">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Natureza">
+    </div>
+</section>
 
-            <!-- Card individual -->
-            <div class="card">
-                <h3>Programação</h3>
-                <p>Desenvolvimento de sites, aplicativos e soluções digitais.</p>
-            </div>
+<!-- ========================= -->
+<!-- CONTATO -->
+<!-- ========================= -->
+<section id="contato" class="section destaque">
+    <h2>Contato</h2>
 
-            <div class="card">
-                <h3>Robótica</h3>
-                <p>Projetos automatizados e soluções tecnológicas.</p>
-            </div>
+    <!-- Formulário -->
+    <form id="form">
+        <input type="text" id="nome" placeholder="Seu nome">
+        <input type="email" id="email" placeholder="Seu email">
+        <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 
-            <div class="card">
-                <h3>Clube de Ciências</h3>
-                <p>Experimentos e investigações científicas.</p>
-            </div>
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+<footer>
+    <p>Projeto Agroforte © 2026</p>
+</footer>
 
-        </div>
-    </section>
+<!-- JS externo -->
+<script src="script.js"></script>
 
-    <!-- SEÇÃO DE BENEFÍCIOS -->
-    <section>
-        <h2>Por que participar?</h2>
+</body>
+</html>
 
-        <div class="cards">
-            <div class="card">
 
+/* ========================= */
+/* ARQUIVO: style.css */
+/* ========================= */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #2e7d32;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.destaque {
+    background: #f1f8e9;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #4caf50;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #2e7d32;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
+
+
+// =========================
+// ARQUIVO: script.js
+// =========================
+
+// MENU HAMBURGUER
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
+// ANIMAÇÃO AO ROLAR
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sec.style.opacity = 1;
+            sec.style.transform = 'translateY(0)';
+        }
+    });
+});
+
+// FORMULÁRIO
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    if (nome === '' || email === '' || mensagem === '') {
+        alert('Preencha todos os campos!');
+    } else {
+        alert('Mensagem enviada com sucesso!');
+        form.reset();
+    }
+});
