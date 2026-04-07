@@ -1,90 +1,128 @@
-<!-- ======================= -->
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* TÍTULO PRINCIPAL */
-.hero h1 {
-    font-size: 3rem; /* tamanho grande */
-}
-
-/* TEXTO DA HERO */
-.hero p {
-    margin: 20px 0;
-    font-size: 1.2rem;
-}
-
-/* BOTÃO */
-.btn {
-    background: #27ae60; /* cor verde */
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #2e7d32;
     color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none; /* remove sublinhado */
-    font-weight: bold;
 }
 
-/* EFEITO AO PASSAR O MOUSE */
-.btn:hover {
-    background: #219150;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* SEÇÕES DO SITE */
-section {
-    padding: 60px 20px; /* espaçamento interno */
-    max-width: 1100px; /* largura máxima */
-    margin: auto; /* centraliza */
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
-/* TÍTULOS DAS SEÇÕES */
-section h2 {
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-/* TEXTO CENTRALIZADO */
-.texto-central {
+/* SEÇÕES */
+.section {
+    padding: 60px 20px;
     text-align: center;
-    max-width: 800px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.destaque {
+    background: #f1f8e9;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #4caf50;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* GALERIA */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* FORMULÁRIO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
     margin: auto;
 }
 
-/* CONTAINER DE CARDS */
-.cards {
-    display: flex; /* organiza em linha */
-    flex-wrap: wrap; /* quebra linha se necessário */
-    gap: 20px; /* espaço entre cards */
-    justify-content: center; /* centraliza */
-}
-
-/* CARD INDIVIDUAL */
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra */
-    text-align: center;
-}
-
-/* SEÇÃO DE CHAMADA (CTA) */
-.cta {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-/* RODAPÉ */
+/* FOOTER */
 footer {
-    background: #111;
+    background: #1b5e20;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
-/* RESPONSIVIDADE (CELULAR) */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem; /* diminui o título em telas menores */
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #2e7d32;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: 100%;
     }
 }
-
